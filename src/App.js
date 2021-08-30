@@ -65,7 +65,6 @@ const App=()=> {
               render={(props) => (
                 <Fragment>
                   <Search
-                    searchUsers={searchUsers}
                     clearUsers={clearUsers}
                     showClear={users.length > 0 ? true : false}
                     setAlert={showAlert}
