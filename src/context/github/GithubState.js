@@ -30,7 +30,7 @@ const GithubState = props => {
 
     //Set Loading
 
-    return <GithubContext.Provider
+    return (<GithubContext.Provider
      value = {{
          users = state,users,
          user = state.user,
@@ -40,5 +40,7 @@ const GithubState = props => {
     >
         {props.children}
     </GithubContext.Provider>
+    );
+};
 
-}
+export default GithubState;
