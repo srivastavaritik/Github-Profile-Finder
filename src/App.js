@@ -70,7 +70,7 @@ const App=()=> {
                     setAlert={showAlert}
                   />
                   <div className="container">
-                    <Users loading={loading} users={users} />
+                    <Users/>
                   </div>
                 </Fragment>
               )}
