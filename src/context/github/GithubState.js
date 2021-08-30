@@ -9,3 +9,12 @@ CLEAR_USERS,
 GET_USER,
 GET_REPOS
 } from '../types';
+
+const GithubState = props => {
+    const initialState = {
+        users: [],
+        user: {},
+        repos: [],
+        loading: false
+    }
+}
