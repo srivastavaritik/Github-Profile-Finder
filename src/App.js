@@ -19,15 +19,7 @@ const App=()=> {
 
 
 
-  const searchUsers = async (text) => {
-    console.log(text);
-    setLoading(true);
-    const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&CLIENT_SECRET=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
-    );
-    setUsers(res.data.items);
-    setLoading(false);
-  };
+  
 
   //get user information
   const getUser = async (username) => {
