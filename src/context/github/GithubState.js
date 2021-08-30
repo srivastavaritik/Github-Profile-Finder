@@ -32,10 +32,10 @@ const GithubState = props => {
 
     return (<GithubContext.Provider
      value = {{
-         users = state,users,
-         user = state.user,
-         repos = staet.repos,
-         loading = state.loading,
+         users : state.users,
+         user  : state.user,
+         repos : state.repos,
+       loading : state.loading,
      }}
     >
         {props.children}

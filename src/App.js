@@ -8,6 +8,7 @@ import Search from './components/users/Search';
 import Users from './components/users/Users';
 import User from './components/users/User';
 import axios from 'axios';
+import GithubState from './context/github/GithubState';
 
 const App=()=> {
   const [users, setUsers] = useState([]);
@@ -60,6 +61,7 @@ const App=()=> {
   };
 
     return (
+      <GithubState>
       <Router>
         <div className="App">
           <Navbar />
@@ -94,6 +96,7 @@ const App=()=> {
           </Switch>
         </div>
       </Router>
+      </GithubState>
     );
 }
 
