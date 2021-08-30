@@ -11,7 +11,6 @@ import axios from 'axios';
 import GithubState from './context/github/GithubState';
 
 const App=()=> {
-  const [users, setUsers] = useState([]);
   const [user, setUser] = useState({});
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -41,12 +40,7 @@ const App=()=> {
     setLoading(false);
   };
 
-  //clear users from Page
-  const clearUsers = async (text) => {
-    console.log('cleared');
-    setUsers([]);
-    setLoading(false);
-  };
+
   const showAlert = (msg, type) => {
     setAlert({ msg, type });
     setTimeout(() => setAlert(null), 2000);
@@ -65,8 +59,6 @@ const App=()=> {
               render={(props) => (
                 <Fragment>
                   <Search
-                    clearUsers={clearUsers}
-                    showClear={users.length > 0 ? true : false}
                     setAlert={showAlert}
                   />
                   <div className="container">
