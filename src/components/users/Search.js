@@ -29,7 +29,7 @@ export class Search extends Component {
         const {clearUsers, showClear } = this.props;
         return (
             <div>
-               <form onSubmit={this.onSubmit} className="form">
+               <form onSubmit={this.onSubmit} className="form" style={{margin:'0px 30px'}}>
                    <input 
                    type="text" 
                    name="text" 
@@ -37,8 +37,9 @@ export class Search extends Component {
                    value= {this.state.text} 
                    onChange={this.onChange}/>
                    <input type="submit" value="Search" className="btn btn-dark btn-block"/>
+                   {showClear && <button className="btn btn-light btn-block" onClick={clearUsers} >Clear</button>}
                </form>
-               {showClear && <button className="btn btn-light btn-block" onClick={clearUsers}>Clear</button>}
+               
               
             </div>
         )
